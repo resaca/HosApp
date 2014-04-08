@@ -1,0 +1,23 @@
+<%= form_for hospital_index_path(@doctor), :remote => true, :html => { :id => "new_doctor" } do |f| %>
+<%= f.hidden_field :user_type, :value => "d" %>
+<div class="left mid-level">
+	Name :
+</div>
+<div class="left mid-level">
+	<%= f.text_field :name, :placeholder => "Name", :class => "custom-text", :required => "true" %><br />
+	<span id="doc_name"></span>
+</div>
+<div class="left mid-level">
+	Department :
+</div>
+<div class="left mid-level">
+	<%= f.text_field :department, :placeholder => "Department", :class => "custom-text", :required => "true" %><br />
+	<span id="doc_dep"></span>
+</div>
+<div class="left mid-level">
+	<div id="doctor-alert"></div>
+</div>
+<div class="left mid-level">
+	<%= f.submit "Create" %>
+</div>
+<% end %>

@@ -1,0 +1,14 @@
+<%= wicked_pdf_stylesheet_link_tag "hospital" -%>
+<div id="all_patients_content">
+<h2>All Patients&nbsp;</h2>
+	<div class="current_page">
+		<% @patients.each do |patient| %>
+		<div class="left low-level patient-pdf-div">
+		<b><%= patient.name %></b>
+		<%= patient.age %>years
+		<%= patient.gender %><br/>
+		Doctor:&nbsp;<%= patient.doctor_name %>
+		</div>
+		<% end %>
+	</div>
+</div>

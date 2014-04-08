@@ -1,0 +1,16 @@
+<div id="exit-modal" onclick="hideDoctor()">Exit</div>
+<h2>Dr.&nbsp;<%= @doctor.name %>&nbsp;<button onclick="window.location.href='/hospital/pdf_doctor/<%= @doctor.id %>'">Generate PDF</button></h2>
+<h4><%= @doctor.department %></h4>
+<div id="modal-patients">
+	<% if @doctor.patients.blank? %>
+		<h5>No patients yet!</h5>
+	<% else %>
+		<% @doctor.patients.each do |patient| %>
+		<div class="patient-details left low-level">
+			<%= patient.name %>
+			<%= patient.age %>years
+			<%= patient.gender %>
+		</div>
+		<% end %>
+	<% end %>
+</div>

@@ -1,0 +1,25 @@
+<div class="wrapper">
+	<h1><a href="/">Hospital Database</a></h1>
+	<div class="left top-level">
+		<h2>New Doctor</h2>
+		<%= render partial: "new_doctor" %>
+	</div>
+	<div class="left top-level">
+		<h2>New Patient</h2>
+		<%= render partial: "new_patient" %>
+	</div>
+	<div class="left top-level" id="all_doctors">
+		<%= render partial: "all_doctors" %>
+	</div>
+	<div class="left top-level" id="all_patients">
+		<%= render partial: "all_patients" %>
+	</div>
+</div>
+<div id="modal" onclick="hideDoctor()">
+	<div id="modal-inner">
+		<div id="modal-content">
+			
+		</div>
+	</div>
+</div>
+<%= render partial: "javascripts" %>

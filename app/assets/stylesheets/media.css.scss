@@ -1,0 +1,58 @@
+@media only screen and (max-width:1300px){
+	.top-level {
+		margin:10px;
+	}
+	.low-level {
+		margin:4px;
+	}
+}
+
+@media only screen and (max-width:1120px){
+	.top-level {
+		margin:6px;
+	}
+	.custom-select {
+		width:190px
+	}
+
+	.custom-text {
+		width:186px;
+	}
+}
+
+@media only screen and (max-width:977px){
+	.top-level, .low-level {
+		width:87%;
+	}
+
+	#modal-patients {
+		height:220px;
+	}
+}
+
+@media only screen and (max-width:670px){
+	.top-level {
+		width:75%;
+	}
+}
+
+@media only screen and (max-width:450px){
+	.top-level {
+		width:68%;
+	}
+
+	.mid-level {
+		width:100%;
+	}
+	
+	#modal-patients {
+		height:320px;
+	}
+}
+
+@media only screen and (max-height:650px){
+	#modal-patients {
+		height:300px;
+	}
+}
+

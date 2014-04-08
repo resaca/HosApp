@@ -1,0 +1,14 @@
+<div id="all_patients_content">
+<h2>All Patients&nbsp;<button onclick="window.location.href='/hospital/pdf_patients'">Generate PDF</button></h2>
+	<div class="pagination_parent">
+	<%= will_paginate @patients, :param_name => 'patients_page' %>
+	</div>
+	<div class="current_page">
+		<% @patients.each do |patient| %>
+		<div class="left low-level">
+		<b><%= patient.name %></b><br/>
+		Doctor:&nbsp;<%= patient.doctor_name %>
+		</div>
+		<% end %>
+	</div>
+</div>

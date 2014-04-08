@@ -1,0 +1,23 @@
+<script>
+$(document).ready(function() {
+  $("#new_doctor").on("ajax:success", function(e, data, status, xhr) {
+		var response = $.parseJSON(xhr.responseText)
+		document.getElementById("new_doctor").reset();
+		$("#all_doctors").load(location.href+ " #all_doctors_content");
+		$("#doctor-alert").html("Added successfully");
+		$("#_hospital_index_doctor_id").append("<option value='"+response.id+"'>"+response.name+"</option>");
+  }).bind("ajax:error", function(e, xhr, status, error) {
+
+  });
+});
+
+$(document).ready(function() {
+	$("#new_patient").on("ajax:success", function(e, data, status, xhr) {
+		document.getElementById("new_patient").reset();
+		$("#patient-alert").html("Added successfully");
+		$("#all_patients").load(location.href+ " #all_patients_content");
+  }).bind("ajax:error", function(e, xhr, status, error) {
+
+  });
+});
+</script>

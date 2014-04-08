@@ -1,0 +1,33 @@
+<%= form_for hospital_index_path(@patient), :remote => true, :html => { :id => "new_patient" } do |f| %>
+<%= f.hidden_field :user_type, :value => "p" %>
+<div class="left mid-level">
+	Name :
+</div>
+<div class="left mid-level">
+	<%= f.text_field :name, :placeholder => "Name", :class => "custom-text", :required => "true" %>
+</div>
+<div class="left mid-level">
+	Age :
+</div>
+<div class="left mid-level">
+	<%= f.text_field :age, :placeholder => "Age", :class => "custom-text", :required => "true", :pattern => "[0-9]*", :title => "Numbers only" %>
+</div>
+<div class="left mid-level">
+	Gender :
+</div>
+<div class="left mid-level">
+	<%= f.select :gender, options_for_select({"Male"=>"Male", "Female"=>"Female"}), {:prompt => "Gender"}, {:class => "custom-select", :required => "true"} %>
+</div>
+<div class="left mid-level">
+	Doctor :
+</div>
+<div class="left mid-level">
+	<%= f.collection_select :doctor_id, Doctor.all, :id, :name, {:prompt=>"Doctor"}, {:class=>"custom-select", :required => "true"} %>
+</div>
+<div class="left mid-level">
+	<div id="patient-alert"></div>
+</div>
+<div class="left mid-level">
+	<%= f.submit "Create" %>
+</div>
+<% end %>

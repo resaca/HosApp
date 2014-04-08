@@ -1,0 +1,123 @@
+.wrapper {
+	width:95%;
+	margin:auto;
+	min-height:700px;
+	box-shadow: 0 1px 1px 0 #C7C7C7 inset;
+	background: none repeat scroll 0 0 #E9E9E9;
+	border-radius: 5px;
+	padding: 2.5%;
+	display:table;
+}
+
+a {
+	text-decoration:none;
+	color:black;
+}
+
+.current {
+	color:blue;
+}
+
+.left {
+	width:40%;
+	float:left;
+	background: white;
+}
+
+.top-level {
+	padding:38px;
+	height:250px;
+	margin:21px;
+	box-shadow: 0 0.5px 0 0 #ffffff inset, 0 1px 2px 0 #B3B3B3;
+	display:table;
+}
+
+.mid-level {
+	margin:1%;
+}
+
+.low-level {
+	margin:10px;
+	padding:13px;
+	box-shadow: 0 1px 1px 0 #C7C7C7 inset;
+	background: none repeat scroll 0 0 #E9E9E9;
+}
+
+.patient-details {
+	width:28.6%;
+}
+
+.custom-select {
+	width:233px
+}
+
+.custom-text {
+	width:230px;
+}
+
+.right {
+	float:right;
+}
+
+.pagination_parent {
+	width:100%;
+}
+
+.pagination {
+	text-align:center;
+}
+
+.doctors {
+	cursor:pointer;
+}
+
+#modal {
+	position: fixed;
+	background: rgba(80,80,80,0.74);
+	width: 100%;
+	height: 3000px;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	display: none;
+}
+
+#modal-inner {
+	border-radius: 5px;
+	width: 80%;
+	height: auto;
+	background: white;
+	margin: auto;
+	margin-top: 25px;
+	box-shadow: 0px 0px 20px #FFF;
+	display:table;
+}
+
+#modal-content {
+	padding:10px;
+	text-align:center;
+}
+
+#modal-patients {
+	height:500px;
+	overflow:auto;
+}
+
+.patient-pdf-div {
+	padding:15px;
+}
+
+.patient-details-pdf {
+	width:43%;
+	padding:11px;
+}
+
+#exit-modal {
+	float:right;
+	cursor:pointer;
+}
+
+#doctor-alert, #patient-alert {
+	color:green;
+}
+

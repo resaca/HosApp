@@ -1,0 +1,14 @@
+<%= wicked_pdf_stylesheet_link_tag "hospital" -%>
+<h2>Dr.&nbsp;<%= @doctor.name %></h2>
+<h4><%= @doctor.department %>&nbsp;department</h4>
+<% if @doctor.patients.blank? %>
+	<h5>No patients yet!</h5>
+<% else %>
+	<% @doctor.patients.each do |patient| %>
+	<div class="patient-details left low-level patient-details-pdf">
+		<%= patient.name %>
+		<%= patient.age %>years
+		<%= patient.gender %>
+	</div>
+	<% end %>
+<% end %>

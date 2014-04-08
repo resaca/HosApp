@@ -1,0 +1,14 @@
+<div id="all_doctors_content">
+<h2>All Doctors</h2>
+	<div class="pagination_parent">
+	<%= will_paginate @doctors, :param_name => 'doctors_page' %>
+	</div>
+	<div class="current_page">
+		<% @doctors.each do |doctor| %>
+		<div class="left low-level doctors" onclick="showDoctor('<%= doctor.id %>')">
+		<b>Dr.&nbsp;<%= doctor.name %></b><br/>
+		<%= doctor.department %>&nbsp;department
+		</div>
+		<% end %>
+	</div>
+</div>
